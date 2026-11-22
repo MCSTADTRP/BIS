@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bandar Ink Society (BIS) – Tattoo-Studio in Central-Bay</title>
+<meta name="description" content="Bandar Ink Society (BIS): Tattoo-Studio in Central-Bay, United-Islands. Chirurgische Präzision trifft permanente Kunst. Galerie, Mitarbeiter und Standort.">
+<meta name="theme-color" content="#0D0D0D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bandar Ink Society (BIS)">
+<meta property="og:description" content="Tattoo-Studio in Central-Bay, United-Islands. Chirurgische Präzision trifft permanente Kunst.">
+<meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preload" href="assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#home" class="brand" aria-label="Bandar Ink Society">
+      <img src="assets/img/logo.png" alt="Bandar Ink Society" width="1200" height="599">
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Navigation">
+      <a href="#home" data-nav="home" data-i18n="nav_home">Home</a>
+      <a href="#tattoos" data-nav="tattoos" data-i18n="nav_tattoos">Tattoos</a>
+      <a href="#team" data-nav="team" data-i18n="nav_team">Mitarbeiter</a>
+      <a href="#standort" data-nav="standort" data-i18n="nav_location">Standort</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="lang-btn" id="langBtn" aria-label="Sprache wechseln">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <span id="langLabel">HI</span>
+      </button>
+      <button type="button" class="burger" id="burger" aria-label="Menü" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="hero-glow" id="heroGlow"></div>
+      <div class="hero-lines"></div>
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow reveal" data-i18n="hero_tagline">BIS — Bandar Inc Society · Central-Bay</p>
+      <h1 class="hero-logo reveal"><img src="assets/img/logo.png" alt="Bandar Ink Society" width="1200" height="599" fetchpriority="high"></h1>
+      <p class="hero-desc reveal" data-i18n="hero_desc">Du möchtest deinem Körper Permanente Tinte verpassen? Hier bist du Richtig!</p>
+      <div class="hero-cta reveal">
+        <a href="#tattoos" class="btn btn-primary" data-i18n="hero_cta1">Galerie entdecken</a>
+        <a href="#standort" class="btn btn-ghost" data-i18n="hero_cta2">Standort ansehen</a>
+      </div>
+    </div>
+    <a href="#tattoos" class="scroll-hint" aria-label="Scroll">
+      <span data-i18n="hero_scroll">Scroll</span>
+      <i></i>
+    </a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
+      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
+      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
+      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
+    </div>
+  </div>
+
+  <section class="section" id="tattoos">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow" data-i18n="gallery_eyebrow">Die Galerie</p>
+        <h2 data-i18n="gallery_title">TATTOOS</h2>
+        <button type="button" class="btn btn-primary btn-sm admin-only" id="addTattooBtn" hidden data-i18n="add">Hinzufügen</button>
+      </header>
+
+      <div class="gallery-tools reveal">
+        <label class="search">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" id="tattooSearch" autocomplete="off" data-i18n-ph="gallery_search" placeholder="Information durchsuchen, z.B. Schädel…">
+        </label>
+        <div class="chips" id="tattooChips" role="tablist"></div>
+      </div>
+
+      <div class="tattoo-table reveal" id="tattooTable" aria-live="polite">
+        <div class="tt-head">
+          <span data-i18n="col_price">Preis</span>
+          <span data-i18n="col_number">Nr.</span>
+          <span data-i18n="col_image">Bild</span>
+          <span data-i18n="col_sessions">Sitzungen</span>
+          <span data-i18n="col_info">Information</span>
+        </div>
+        <div id="tattooRows"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="team">
+    <div class="wrap">
+      <header class="section-head center reveal">
+        <p class="eyebrow" data-i18n="team_eyebrow">Die Kuratoren</p>
+        <h2 data-i18n="team_title">MITARBEITER</h2>
+        <p class="section-sub" data-i18n="team_sub">Präzision ohne Kompromiss. Zertifiziert in Hygiene und Sterilisation.</p>
+        <button type="button" class="btn btn-primary btn-sm admin-only" id="addStaffBtn" hidden data-i18n="add">Hinzufügen</button>
+      </header>
+      <div id="teamWrap"></div>
+    </div>
+  </section>
+
+  <section class="section" id="standort">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow" data-i18n="loc_eyebrow">Das Refugium</p>
+        <h2 data-i18n="loc_title">STANDORT</h2>
+      </header>
+      <div class="loc-grid">
+        <div class="photos reveal">
+          <button type="button" class="photo photo-main" data-photo="0">
+            <img src="assets/img/empfang.jpg" alt="Empfang" loading="lazy" width="1600" height="841">
+            <span class="photo-label" data-i18n="loc_reception">Empfang</span>
+          </button>
+          <button type="button" class="photo" data-photo="1">
+            <img src="assets/img/saal-1.jpg" alt="Tattoo-Saal 1" loading="lazy" width="1600" height="841">
+            <span class="photo-label"><span data-i18n="loc_room">Tattoo-Saal</span> 1</span>
+          </button>
+          <button type="button" class="photo" data-photo="2">
+            <img src="assets/img/saal-2.jpg" alt="Tattoo-Saal 2" loading="lazy" width="1600" height="841">
+            <span class="photo-label"><span data-i18n="loc_room">Tattoo-Saal</span> 2</span>
+          </button>
+        </div>
+        <div class="map-card reveal">
+          <div class="map" id="map" aria-label="Karte">
+            <div class="map-stage" id="mapStage">
+              <img src="assets/img/karte.png" alt="Karte von Central-Bay" draggable="false" width="535" height="526">
+              <div class="marker" id="mapMarker" role="img" aria-label="BIS">
+                <i></i><span>BIS</span>
+              </div>
+            </div>
+            <div class="map-ui">
+              <button type="button" id="zoomIn" aria-label="Zoom +">+</button>
+              <button type="button" id="zoomOut" aria-label="Zoom −">−</button>
+              <button type="button" id="zoomReset" aria-label="Reset">⟲</button>
+            </div>
+            <div class="map-hint"><span data-i18n="loc_map">Central-Bay · United-Islands</span><em data-i18n="loc_map_hint">Ziehen · Zoomen</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-grid reveal">
+        <div class="info-card">
+          <p class="eyebrow" data-i18n="loc_address">Adresse</p>
+          <p class="info-big">Friedensstraße 3</p>
+          <p>Central-Bay</p>
+          <p>United-Islands</p>
+        </div>
+        <div class="info-card">
+          <p class="eyebrow" data-i18n="loc_phone">Telefon</p>
+          <p class="info-phone"><span>17938/80794</span> Imran Kumar</p>
+          <p class="info-phone"><span>17938/25562</span> Karan Gupta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="footer-logo" src="assets/img/logo.png" alt="Bandar Ink Society" width="1200" height="599" loading="lazy">
+      <p class="footer-name">Bandar Inc Society (BIS)</p>
+      <p>Central-Bay</p>
+      <p>United-Islands</p>
+    </div>
+    <div>
+      <p class="eyebrow" data-i18n="footer_nav">Navigation</p>
+      <ul>
+        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+        <li><a href="#tattoos" data-i18n="nav_tattoos">Tattoos</a></li>
+        <li><a href="#team" data-i18n="nav_team">Mitarbeiter</a></li>
+        <li><a href="#standort" data-i18n="nav_location">Standort</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow" data-i18n="footer_contact">Kontakt</p>
+      <ul>
+        <li>Friedensstraße 3, Central-Bay, United-Islands</li>
+        <li class="mono">17938/80794 · Imran Kumar</li>
+        <li class="mono">17938/25562 · Karan Gupta</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p data-i18n="footer_copy">© 2026 Bandar Inc Society (BIS). Alle Rechte vorbehalten.</p>
+    <a href="#home" class="to-top" aria-label="Top">↑</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Prev">‹</button>
+  <img id="lbImg" alt="">
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<dialog class="dialog" id="tattooDialog">
+  <form method="dialog" id="tattooForm">
+    <h3 data-i18n="td_title">Tattoos hinzufügen</h3>
+    <label><span data-i18n="td_image">Bild</span><input type="file" id="tdImage" accept="image/*"></label>
+    <div class="row2">
+      <label><span data-i18n="td_number">Tattoo-Nr.</span><input type="text" id="tdNumber" data-i18n-ph="td_ph_number" placeholder="z.B. 7"></label>
+      <label><span data-i18n="td_price">Preis</span><input type="text" id="tdPrice" data-i18n-ph="td_ph_price" placeholder="z.B. 480"></label>
+    </div>
+    <div class="row2">
+      <label><span data-i18n="td_sessions">Sitzungen</span><input type="text" id="tdSessions" data-i18n-ph="td_ph_sessions" placeholder="z.B. 3"></label>
+      <label><span data-i18n="td_category">Kategorie</span><select id="tdCategory"></select></label>
+    </div>
+    <label><span data-i18n="td_info">Information</span><input type="text" id="tdInfo" data-i18n-ph="td_ph_info" placeholder="Was ist das für ein Tattoo?"></label>
+    <p class="form-err" id="tdErr" role="alert"></p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost btn-sm" data-close data-i18n="cancel">Abbrechen</button>
+      <button type="submit" class="btn btn-primary btn-sm" data-i18n="save">Speichern</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="dialog" id="staffDialog">
+  <form method="dialog" id="staffForm">
+    <h3 data-i18n="sd_title">Mitarbeiter hinzufügen</h3>
+    <label><span data-i18n="sd_image">Porträt (optional)</span><input type="file" id="sdImage" accept="image/*"></label>
+    <label><span data-i18n="sd_name">Name</span><input type="text" id="sdName" data-i18n-ph="sd_ph_name" placeholder="z.B. Imran Kumar"></label>
+    <div class="row2">
+      <label><span data-i18n="sd_role">Rolle</span><select id="sdRole"></select></label>
+      <label><span data-i18n="sd_phone">Telefon (optional)</span><input type="text" id="sdPhone" data-i18n-ph="sd_ph_phone" placeholder="z.B. 17938/80794"></label>
+    </div>
+    <p class="form-err" id="sdErr" role="alert"></p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost btn-sm" data-close data-i18n="cancel">Abbrechen</button>
+      <button type="submit" class="btn btn-primary btn-sm" data-i18n="save">Speichern</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="admin-bar" id="adminBar" hidden>
+  <span>ADMIN</span>
+  <button type="button" id="adminExport" class="btn btn-ghost btn-sm">Export</button>
+  <button type="button" id="adminReset" class="btn btn-ghost btn-sm">Reset</button>
+  <button type="button" id="adminExit" class="btn btn-ghost btn-sm">✕</button>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
