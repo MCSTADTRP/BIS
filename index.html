@@ -19,21 +19,25 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="#home" class="brand" aria-label="Bandar Ink Society">
-      <img src="assets/img/logo.png" alt="Bandar Ink Society" width="1200" height="599">
+    <a href="#home" class="brand" data-i18n-aria="brand_name" aria-label="Bandar Ink Society">
+      <img src="assets/img/logo-sm.png" alt="Bandar Ink Society" data-i18n-alt="brand_name" width="360" height="180">
     </a>
-    <nav class="main-nav" id="mainNav" aria-label="Navigation">
+    <nav class="main-nav" id="mainNav" data-i18n-aria="aria_nav" aria-label="Navigation">
       <a href="#home" data-nav="home" data-i18n="nav_home">Home</a>
       <a href="#tattoos" data-nav="tattoos" data-i18n="nav_tattoos">Tattoos</a>
       <a href="#team" data-nav="team" data-i18n="nav_team">Mitarbeiter</a>
       <a href="#standort" data-nav="standort" data-i18n="nav_location">Standort</a>
     </nav>
     <div class="header-actions">
-      <button type="button" class="lang-btn" id="langBtn" aria-label="Sprache wechseln">
+      <button type="button" class="cart-btn" id="cartBtn" data-i18n-aria="cart_title" aria-label="Warenkorb" hidden>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button type="button" class="lang-btn" id="langBtn" data-i18n-aria="aria_lang" aria-label="Sprache wechseln">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
         <span id="langLabel">HI</span>
       </button>
-      <button type="button" class="burger" id="burger" aria-label="Menü" aria-expanded="false" aria-controls="mainNav">
+      <button type="button" class="burger" id="burger" data-i18n-aria="aria_menu" aria-label="Menü" aria-expanded="false" aria-controls="mainNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -49,14 +53,14 @@
     </div>
     <div class="hero-content">
       <p class="eyebrow reveal" data-i18n="hero_tagline">BIS — Bandar Inc Society · Central-Bay</p>
-      <h1 class="hero-logo reveal"><img src="assets/img/logo.png" alt="Bandar Ink Society" width="1200" height="599" fetchpriority="high"></h1>
+      <h1 class="hero-logo reveal"><img src="assets/img/logo.png" alt="Bandar Ink Society" data-i18n-alt="brand_name" width="900" height="449" fetchpriority="high"></h1>
       <p class="hero-desc reveal" data-i18n="hero_desc">Du möchtest deinem Körper Permanente Tinte verpassen? Hier bist du Richtig!</p>
       <div class="hero-cta reveal">
         <a href="#tattoos" class="btn btn-primary" data-i18n="hero_cta1">Galerie entdecken</a>
         <a href="#standort" class="btn btn-ghost" data-i18n="hero_cta2">Standort ansehen</a>
       </div>
     </div>
-    <a href="#tattoos" class="scroll-hint" aria-label="Scroll">
+    <a href="#tattoos" class="scroll-hint" data-i18n-aria="hero_scroll" aria-label="Scroll">
       <span data-i18n="hero_scroll">Scroll</span>
       <i></i>
     </a>
@@ -64,10 +68,10 @@
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
-      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
-      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
-      <span>BANDAR INK SOCIETY</span><b>✦</b><span>CENTRAL-BAY</span><b>✦</b><span>UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
     </div>
   </div>
 
@@ -82,20 +86,13 @@
       <div class="gallery-tools reveal">
         <label class="search">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-          <input type="search" id="tattooSearch" autocomplete="off" data-i18n-ph="gallery_search" placeholder="Information durchsuchen, z.B. Schädel…">
+          <input type="search" id="tattooSearch" autocomplete="off" data-i18n-ph="gallery_search" placeholder="Nummer oder Information suchen, z.B. Rose…">
         </label>
         <div class="chips" id="tattooChips" role="tablist"></div>
       </div>
 
-      <div class="tattoo-table reveal" id="tattooTable" aria-live="polite">
-        <div class="tt-head">
-          <span data-i18n="col_price">Preis</span>
-          <span data-i18n="col_number">Nr.</span>
-          <span data-i18n="col_image">Bild</span>
-          <span data-i18n="col_sessions">Sitzungen</span>
-          <span data-i18n="col_info">Information</span>
-        </div>
-        <div id="tattooRows"></div>
+      <div class="reveal" id="tattooTable">
+        <div class="tattoo-grid" id="tattooRows" aria-live="polite"></div>
       </div>
     </div>
   </section>
@@ -121,22 +118,22 @@
       <div class="loc-grid">
         <div class="photos reveal">
           <button type="button" class="photo photo-main" data-photo="0">
-            <img src="assets/img/empfang.jpg" alt="Empfang" loading="lazy" width="1600" height="841">
+            <img src="assets/img/empfang.jpg" alt="Empfang" data-i18n-alt="loc_reception" loading="lazy" width="1600" height="841">
             <span class="photo-label" data-i18n="loc_reception">Empfang</span>
           </button>
           <button type="button" class="photo" data-photo="1">
-            <img src="assets/img/saal-1.jpg" alt="Tattoo-Saal 1" loading="lazy" width="1600" height="841">
+            <img src="assets/img/saal-1.jpg" alt="Tattoo-Saal 1" data-i18n-alt="alt_room1" loading="lazy" width="1600" height="841">
             <span class="photo-label"><span data-i18n="loc_room">Tattoo-Saal</span> 1</span>
           </button>
           <button type="button" class="photo" data-photo="2">
-            <img src="assets/img/saal-2.jpg" alt="Tattoo-Saal 2" loading="lazy" width="1600" height="841">
+            <img src="assets/img/saal-2.jpg" alt="Tattoo-Saal 2" data-i18n-alt="alt_room2" loading="lazy" width="1600" height="841">
             <span class="photo-label"><span data-i18n="loc_room">Tattoo-Saal</span> 2</span>
           </button>
         </div>
         <div class="map-card reveal">
-          <div class="map" id="map" aria-label="Karte">
+          <div class="map" id="map" data-i18n-aria="aria_map" aria-label="Karte">
             <div class="map-stage" id="mapStage">
-              <img src="assets/img/karte.png" alt="Karte von Central-Bay" draggable="false" width="535" height="526">
+              <img src="assets/img/karte.jpg" alt="Karte von Central-Bay" data-i18n-alt="alt_map" draggable="false" width="535" height="526" loading="lazy" decoding="async">
               <div class="marker" id="mapMarker" role="img" aria-label="BIS">
                 <i></i><span>BIS</span>
               </div>
@@ -144,7 +141,7 @@
             <div class="map-ui">
               <button type="button" id="zoomIn" aria-label="Zoom +">+</button>
               <button type="button" id="zoomOut" aria-label="Zoom −">−</button>
-              <button type="button" id="zoomReset" aria-label="Reset">⟲</button>
+              <button type="button" id="zoomReset" data-i18n-aria="aria_reset" aria-label="Reset">⟲</button>
             </div>
             <div class="map-hint"><span data-i18n="loc_map">Central-Bay · United-Islands</span><em data-i18n="loc_map_hint">Ziehen · Zoomen</em></div>
           </div>
@@ -154,14 +151,14 @@
       <div class="info-grid reveal">
         <div class="info-card">
           <p class="eyebrow" data-i18n="loc_address">Adresse</p>
-          <p class="info-big">Friedensstraße 3</p>
-          <p>Central-Bay</p>
-          <p>United-Islands</p>
+          <p class="info-big" data-i18n="addr_street">Friedensstraße 3</p>
+          <p data-i18n="addr_city">Central-Bay</p>
+          <p data-i18n="addr_country">United-Islands</p>
         </div>
         <div class="info-card">
           <p class="eyebrow" data-i18n="loc_phone">Telefon</p>
-          <p class="info-phone"><span>17938/80794</span> Imran Kumar</p>
-          <p class="info-phone"><span>17938/25562</span> Karan Gupta</p>
+          <p class="info-phone"><span>17938/80794</span><i data-name="Imran Kumar">Imran Kumar</i></p>
+          <p class="info-phone"><span>17938/25562</span><i data-name="Karan Gupta">Karan Gupta</i></p>
         </div>
       </div>
     </div>
@@ -171,10 +168,10 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <img class="footer-logo" src="assets/img/logo.png" alt="Bandar Ink Society" width="1200" height="599" loading="lazy">
-      <p class="footer-name">Bandar Inc Society (BIS)</p>
-      <p>Central-Bay</p>
-      <p>United-Islands</p>
+      <img class="footer-logo" src="assets/img/logo-sm.png" alt="Bandar Ink Society" data-i18n-alt="brand_name" width="360" height="180" loading="lazy">
+      <p class="footer-name" data-i18n="footer_name">Bandar Inc Society (BIS)</p>
+      <p data-i18n="addr_city">Central-Bay</p>
+      <p data-i18n="addr_country">United-Islands</p>
     </div>
     <div>
       <p class="eyebrow" data-i18n="footer_nav">Navigation</p>
@@ -188,23 +185,32 @@
     <div>
       <p class="eyebrow" data-i18n="footer_contact">Kontakt</p>
       <ul>
-        <li>Friedensstraße 3, Central-Bay, United-Islands</li>
-        <li class="mono">17938/80794 · Imran Kumar</li>
-        <li class="mono">17938/25562 · Karan Gupta</li>
+        <li data-i18n="addr_full">Friedensstraße 3, Central-Bay, United-Islands</li>
+        <li class="mono">17938/80794 · <span data-name="Imran Kumar">Imran Kumar</span></li>
+        <li class="mono">17938/25562 · <span data-name="Karan Gupta">Karan Gupta</span></li>
       </ul>
     </div>
   </div>
   <div class="wrap footer-bottom">
     <p data-i18n="footer_copy">© 2026 Bandar Inc Society (BIS). Alle Rechte vorbehalten.</p>
-    <a href="#home" class="to-top" aria-label="Top">↑</a>
+    <a href="#home" class="to-top" data-i18n-aria="aria_top" aria-label="Top">↑</a>
   </div>
 </footer>
 
+<div class="cart-overlay" id="cartOverlay" hidden></div>
+<aside class="cart" id="cart" aria-hidden="true" aria-labelledby="cartTitle">
+  <header class="cart-head">
+    <h3 id="cartTitle" data-i18n="cart_title">Warenkorb</h3>
+    <button type="button" class="cart-close" id="cartClose" data-i18n-aria="aria_close" aria-label="Close">✕</button>
+  </header>
+  <div class="cart-body" id="cartBody"></div>
+</aside>
+
 <div class="lightbox" id="lightbox" hidden>
-  <button type="button" class="lb-close" id="lbClose" aria-label="Close">✕</button>
-  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Prev">‹</button>
+  <button type="button" class="lb-close" id="lbClose" data-i18n-aria="aria_close" aria-label="Close">✕</button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" data-i18n-aria="aria_prev" aria-label="Prev">‹</button>
   <img id="lbImg" alt="">
-  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  <button type="button" class="lb-nav lb-next" id="lbNext" data-i18n-aria="aria_next" aria-label="Next">›</button>
   <p class="lb-cap" id="lbCap"></p>
 </div>
 
@@ -214,12 +220,13 @@
     <label><span data-i18n="td_image">Bild</span><input type="file" id="tdImage" accept="image/*"></label>
     <div class="row2">
       <label><span data-i18n="td_number">Tattoo-Nr.</span><input type="text" id="tdNumber" data-i18n-ph="td_ph_number" placeholder="z.B. 7"></label>
-      <label><span data-i18n="td_price">Preis</span><input type="text" id="tdPrice" data-i18n-ph="td_ph_price" placeholder="z.B. 480"></label>
-    </div>
-    <div class="row2">
-      <label><span data-i18n="td_sessions">Sitzungen</span><input type="text" id="tdSessions" data-i18n-ph="td_ph_sessions" placeholder="z.B. 3"></label>
       <label><span data-i18n="td_category">Kategorie</span><select id="tdCategory"></select></label>
     </div>
+    <div class="row2">
+      <label><span data-i18n="td_price_cash">Preis Bar</span><input type="text" inputmode="decimal" id="tdPriceCash" data-i18n-ph="td_ph_price_cash" placeholder="z.B. 430"></label>
+      <label><span data-i18n="td_price">Preis Karte</span><input type="text" inputmode="decimal" id="tdPrice" data-i18n-ph="td_ph_price" placeholder="z.B. 480"></label>
+    </div>
+    <label><span data-i18n="td_sessions">Sitzungen</span><input type="text" id="tdSessions" data-i18n-ph="td_ph_sessions" placeholder="z.B. 3"></label>
     <label><span data-i18n="td_info">Information</span><input type="text" id="tdInfo" data-i18n-ph="td_ph_info" placeholder="Was ist das für ein Tattoo?"></label>
     <p class="form-err" id="tdErr" role="alert"></p>
     <div class="dialog-actions">

@@ -6,7 +6,9 @@ Website der **Bandar Ink Society (BIS)**, ein Tattoo-Studio in Central-Bay, Unit
 Neubau der Originalseite https://bandar-inc-society.base44.app/ mit allen Features, aber deutlich schöner.
 
 - Domain: noch offen
-- Sprachen: Deutsch und Hindi (Umschalter oben rechts, Auswahl wird in `localStorage` gemerkt)
+- Sprachen: Deutsch und Hindi (Umschalter oben rechts, Auswahl wird in `localStorage` gemerkt). Alles auf der Seite ist übersetzt: Texte, Bildbeschreibungen, Seitentitel und Meta-Beschreibung, Adresse, Namen (Hindi-Schreibweise in `NAMES_HI` in `assets/js/main.js`), Tattoo-Beschreibungen. Ausnahmen: Logo-Bild, Abkürzung "BIS", Telefonnummern, Begriffe wie "AK 47" und "1312 (ACAB)", Admin-Leiste.
+- Neue Texte immer in beide Sprachen anlegen: `I18N.de` und `I18N.hi` in `assets/js/main.js` (gleiche Schlüssel). Im HTML `data-i18n`, `data-i18n-ph` (Platzhalter), `data-i18n-aria`, `data-i18n-alt`, `data-name` (Personennamen). Tattoo-Beschreibung in `assets/js/data.js` als `info: { de: "…", hi: "…" }`. Neue Mitarbeiter-Namen zusätzlich in `NAMES_HI` eintragen.
+- Hindi-Schrift: Outfit hat keine Devanagari-Zeichen, es greifen die Systemschriften. Für `html[lang="hi"]` gelten eigene Regeln am Ende von `assets/css/style.css` (kein Buchstabenabstand, größere Kleinschrift).
 - Marke: oranges Graffiti-Logo auf Schwarz (`assets/img/logo.png`, freigestellt aus `logo-b91/BANDAR Ink Society Logo.png`)
 
 ## Design
@@ -27,7 +29,7 @@ Neubau der Originalseite https://bandar-inc-society.base44.app/ mit allen Featur
 - `assets/css/style.css` — Styles
 - `assets/js/main.js` — Übersetzungen (DE/HI), Galerie, Team, Lightbox, Karte, Admin-Modus
 - `assets/js/data.js` — **Inhalte**: Tattoos und Mitarbeiter (hier pflegen)
-- `assets/img/` — Logo, Favicon, `og.jpg`, Standort-Fotos (`empfang.jpg`, `saal-1.jpg`, `saal-2.jpg`), Karte (`karte.png`)
+- `assets/img/` — Logo, Favicon, `og.jpg`, Standort-Fotos (`empfang.jpg`, `saal-1.jpg`, `saal-2.jpg`), Karte (`karte.jpg`)
 - `assets/img/tattoos/` und `assets/img/team/` — Bilder, die per Export dazukommen
 - `robots.txt`
 
@@ -38,6 +40,38 @@ Neubau der Originalseite https://bandar-inc-society.base44.app/ mit allen Featur
 - Standort: Fotos (Empfang, Tattoo-Saal 1 und 2) mit Lightbox, interaktive Karte (ziehen, Mausrad-Zoom, Pinch-Zoom, Zoom-Buttons). Der BIS-Marker ist fest gesetzt und nicht verschiebbar; Position in `assets/js/main.js` (`pos`, Anteil an der Kartenbreite/-höhe: x 0.192, y 0.363). Die Karte hat festes Seitenverhältnis 535:526, damit der Marker bei jeder Größe auf derselben Stelle liegt.
 - DE/HI-Umschaltung (Texte stammen aus dem Original)
 
+## Warenkorb
+
+- Jedes Tattoo in der Galerie hat ein "+"; damit kommt es in den Warenkorb (Symbol oben im Header, Schublade von rechts). Der Warenkorb bleibt im Browser (`localStorage`, Schlüssel `bis_cart`).
+- Nutzer liefert nur die **Barpreise** (`priceCash` in `assets/js/data.js`). Der Kartenpreis wird automatisch berechnet: Barpreis plus 5 % (`cardMarkupPct`), dann auf die nächste 5er-Zahl aufgerundet (`cardRoundTo`). Beispiele: 750 → 790, 500 → 525, 1250 → 1315. Wird ein Kartenpreis trotzdem von Hand als `price` gesetzt, hat der Vorrang.
+- Währung: Euro (`currency: "€"`).
+- Aktuelle Barpreise: Tattoo 1, 2, 9, 10, 14, 15 = 750; Tattoo 3 bis 6, 16, 17, 18 = 500; Tattoo 7, 8, 11, 12, 13 = 1250. Damit haben alle 18 Tattoos einen Preis.
+- Tattoo 12 liegt in der Kategorie Arm Links (Dateiname sagte "Rücken", Nutzer hat korrigiert).
+- Mengenrabatt auf die gesamte Anzahl: ab 2 Tattoos 10 %, ab 5 Tattoos 20 %, ab 10 Tattoos 40 % (`volumeDiscounts` in `assets/js/data.js`).
+- Rabattcodes in `codes` in `assets/js/data.js`, z. B. `"UI-NEWS": 10` (10 % auf alles, Groß-/Kleinschreibung egal). Neue Partner-Codes dort ergänzen.
+- Code kommt oben drauf: Mengenrabatt und Code-Rabatt werden in Prozentpunkten addiert (40 % + 10 % = 50 %), `stackDiscounts: true`. Mit `false` gilt nur der höhere von beiden.
+- Der Warenkorb zeigt Gesamtsumme in Bargeld und in Karte, die Ersparnis durch Bargeld und einen Hinweis auf den nächsten Rabatt. "Zusammenfassung kopieren" legt den Auftrag in die Zwischenablage. Bezahlt wird im Spiel, es gibt kein Checkout.
+- Admin-Formular: Barpreis ist Pflicht, Kartenpreis optional (sonst automatisch).
+
+## Tattoo-Fotos
+
+- Quelle: `C:\Users\Mateo\Documents\MC Stadt [WICHTIG]\bis-tattoos`, Dateinamen `<Nummer>-<Körperstelle>.png` (z. B. `7-brust.png`, `1-rechterarm.png`, `3-kopf.png`). Zuordnung: kopf = Gesicht, brust, rücken, rechterarm/rechtearm = Arm Rechts, linkearm/linkerarm = Arm Links, rechtebein = Bein Rechts, linkebein = Bein Links.
+- Originale: 2560×1377, Person immer in der Mitte. Zuschnitt für alle gleich: Pixel x 980 bis 1600, y 360 bis 1290 (620×930, Verhältnis 2:3), damit die Person das Bild füllt und das Tattoo gut erkennbar ist.
+- Ausgabe nach `assets/img/tattoos/`: `tattoo-<Nr>.jpg` (600×900, JPEG Qualität 70, progressiv, ca. 25 KB) für die Lightbox und `tattoo-<Nr>-s.jpg` (360×540, Qualität 64, ca. 10 KB) für Karten und Warenkorb. Felder `image` und `thumb` in `assets/js/data.js`.
+- Galerie ist ein Kartenraster (Desktop 5 Spalten, Handy 2 Spalten) statt Liste: großes Bild, Nummer, Körperstelle, Preise, Plus-Button, Sitzungen, Beschreibung.
+- Es wird insgesamt 301 Tattoos geben, der Nutzer schickt sie nach und nach. Die Galerie zeigt deshalb 20 Karten und lädt per "Mehr anzeigen" (je 20) nach; Filter und Suche setzen zurück. Die Suche findet Nummer (auch mit #) und Beschreibung. Mit 300 Karten getestet: alle zusammen rendern in ca. 130 ms, Bilder laden nur sichtbar.
+- Neue Tattoos kommen in Schüben: Fotos in `bis-tattoos`, Dateiname `<Nr>-<Körperstelle>.png`. Ablauf pro Schub: zuschneiden und komprimieren (Parameter oben), Einträge in `assets/js/data.js` ergänzen, Bar-Preis, Beschreibung (Deutsch und Hindi) und Kategorie nach Angabe des Nutzers. Dateiname kann falsch sein (Tattoo 12 hieß "rücken", ist aber Arm Links), Angaben des Nutzers gehen vor.
+- Beschreibung bleibt leer (Karte zeigt dann nichts).
+- Sitzungen: Standard ist 1 (Feld `sessions` weglassen). Der Preis gilt pro Sitzung, steht unter dem Preis als "Preis pro Sitzung". Bei `sessions: 2` oder mehr erscheint auf der Karte der Hinweis "Du bezahlst für 2 Sitzungen, also 2× den Preis" plus "Mindestens 3 Tage Wartezeit bis zur nächsten Sitzung" (`sessionWaitDays` in `data.js`). Im Warenkorb wird Preis × Sitzungen gerechnet; der Mengenrabatt zählt Tattoos, nicht Sitzungen. Ein Full-Body-Tattoo mit mehreren Sitzungen kommt später, Nutzer sagt Bescheid.
+- Ohne Preis zeigt die Seite "–" und der Plus-Button ist gesperrt. Preise (Karte `price`, Bar `priceCash`) und Sitzungen (`sessions`) kommen vom Nutzer und werden in `assets/js/data.js` ergänzt.
+- Mitarbeiter-Fotos kommen später (Feld `photo` in `assets/js/data.js`).
+
+## Performance (auch für schwache Geräte)
+
+- Start-Ladung unkomprimiert ca. 160 KB (HTML, CSS, JS, Schrift, Logo). Tattoo-Bilder laden erst beim Scrollen (`loading="lazy"`), alle Tattoos zusammen (Vorschauen plus große Versionen) ca. 630 KB, geladen wird nur, was sichtbar wird.
+- Logo: `logo.png` (900 px, Palette, 28 KB) im Hero, `logo-sm.png` (360 px, 9 KB) in Header und Footer. Standort-Fotos 1280 px JPEG (ca. 55 KB), Karte `karte.jpg` (51 KB).
+- Neue Bilder immer so komprimieren: JPEG, progressiv, nicht größer als nötig (doppelte Anzeigegröße), kleine Vorschau plus größere Version.
+
 ## Inhalte pflegen
 
 - Mitarbeiter und Tattoos stehen in `assets/js/data.js`.
@@ -47,7 +81,7 @@ Neubau der Originalseite https://bandar-inc-society.base44.app/ mit allen Featur
 ## Arbeitsregeln
 
 - Dateien direkt im Ordner bearbeiten. Keine ZIPs, der Nutzer lädt den ganzen Ordner hoch.
-- Keine Kommentare im Code (weder HTML, CSS noch JS).
+- Keine Kommentare im Code (weder HTML, CSS noch JS), in keiner Datei. Nur Code, keine KI-Erklärtexte. Gilt auch für neue Dateien.
 - Keine externen Fonts/CDNs (DSGVO).
 - Mobile prüfen: kein horizontales Scrollen, Tap-Ziele mindestens 36 px.
 - Impressum und Datenschutzerklärung fehlen noch und sind vor dem Livegang nötig.
@@ -64,3 +98,14 @@ Neubau der Originalseite https://bandar-inc-society.base44.app/ mit allen Featur
 - Mitarbeiter: Imran Kumar und Karan Gupta (Tätowierer), Ajay Bhatt und Tayler Creed (Assistenz, 17938/78200).
 - Admin-Modus mit lokalem Hinzufügen/Löschen und Export eingebaut.
 - Desktop und Handy lokal getestet, keine Konsolenfehler.
+
+### 2026-11-24
+- Warenkorb eingebaut: Plus-Button pro Tattoo, Bar- und Kartenpreis, Mengenrabatt (2/5/10 Tattoos = 10/20/40 %), Rabattcodes (UI-NEWS = 10 %), Gesamtsumme in Bar und Karte, Ersparnis durch Bargeld.
+- Rechnung geprüft (u. a. 3 Tattoos, 11 Tattoos, Code).
+- Alle Dateien auf Kommentare geprüft, keine vorhanden.
+- Code-Rabatt kommt oben auf den Mengenrabatt (`stackDiscounts: true`).
+- Preise für Tattoo 1 bis 8 eingetragen (Bar 750, 500, 1250), Kartenpreis automatisch +5 % auf 5er-Zahl aufgerundet, Währung auf Euro umgestellt.
+- Sitzungen: Standard 1, Preis gilt pro Sitzung (Hinweis auf der Karte), bei mehr Sitzungen Hinweis zu doppeltem Preis und Wartezeit, Warenkorb rechnet Preis × Sitzungen.
+- Beschreibungen für alle 18 Tattoos eingetragen (Deutsch und Hindi). Die gesamte Seite ist jetzt vollständig auf Hindi verfügbar.
+- Galerie von Liste auf großes Kartenraster umgestellt, Fotos enger auf die Person zugeschnitten und größer dargestellt.
+- Die ersten 18 Tattoos eingetragen (Fotos zugeschnitten und komprimiert, ohne Preise). Alle übrigen Bilder verkleinert: Start-Ladung ca. 160 KB.
