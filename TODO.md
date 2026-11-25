@@ -1,7 +1,8 @@
 # TODO
 
 ## Offen
-- [ ] Restliche Tattoos bis Nr. 301 (Nutzer schickt sie in Schüben), gleicher Ablauf wie bei den ersten 18
+- [ ] Restliche Tattoos Nr. 101 bis 301 (Nutzer schickt sie in Schüben), gleicher Ablauf
+- [ ] Preise und Beschreibungen für Nr. 19 bis 100
 - [ ] Sitzungen pro Tattoo
 - [ ] Mitarbeiter-Fotos
 - [ ] Weitere Partner-Rabattcodes (aktuell nur UI-NEWS)
