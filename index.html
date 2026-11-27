@@ -61,8 +61,17 @@
     </a>
   </section>
 
-  <div class="strip" aria-hidden="true">
-    <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+      <span data-i18n="marq_name">BANDAR INK SOCIETY</span><b>✦</b><span data-i18n="addr_city_caps">CENTRAL-BAY</span><b>✦</b><span data-i18n="addr_country_caps">UNITED-ISLANDS</span><b>✦</b>
+    </div>
   </div>
 
   <section class="section" id="tattoos">
@@ -170,6 +179,7 @@
         <li><a href="#tattoos" data-i18n="nav_tattoos">Tattoos</a></li>
         <li><a href="#team" data-i18n="nav_team">Mitarbeiter</a></li>
         <li><a href="#standort" data-i18n="nav_location">Standort</a></li>
+        <li><button type="button" class="agb-link" id="agbBtn" data-i18n="agb_link">AGB</button></li>
       </ul>
     </div>
     <div>
@@ -187,23 +197,6 @@
   </div>
 </footer>
 
-<div class="player" id="player">
-  <button type="button" class="pl-play" id="plPlay" data-i18n-aria="aria_play" aria-label="Musik abspielen" aria-pressed="false">
-    <svg class="ic-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
-    <svg class="ic-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
-  </button>
-  <div class="pl-info">
-    <b data-name="Tunak Tunak Tun">Tunak Tunak Tun</b>
-    <span data-name="Daler Mehndi">Daler Mehndi</span>
-  </div>
-  <div class="pl-eq" aria-hidden="true"><i></i><i></i><i></i></div>
-  <button type="button" class="pl-vol-btn" id="plMute" data-i18n-aria="aria_volume" aria-label="Lautstärke">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z"/><path class="ic-wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="ic-off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
-  </button>
-  <input type="range" class="pl-range" id="plVol" min="0" max="100" step="1" value="40" data-i18n-aria="aria_volume" aria-label="Lautstärke">
-  <audio id="plAudio" src="assets/audio/tunak.mp3" preload="none" loop></audio>
-</div>
-
 <div class="cart-overlay" id="cartOverlay" hidden></div>
 <aside class="cart" id="cart" aria-hidden="true" aria-labelledby="cartTitle">
   <header class="cart-head">
@@ -217,9 +210,35 @@
   <button type="button" class="lb-close" id="lbClose" data-i18n-aria="aria_close" aria-label="Close">✕</button>
   <button type="button" class="lb-nav lb-prev" id="lbPrev" data-i18n-aria="aria_prev" aria-label="Prev">‹</button>
   <img id="lbImg" alt="">
+  <div class="lb-pic" id="lbPic" hidden></div>
+  <div class="lb-info" id="lbInfo" hidden></div>
   <button type="button" class="lb-nav lb-next" id="lbNext" data-i18n-aria="aria_next" aria-label="Next">›</button>
   <p class="lb-cap" id="lbCap"></p>
 </div>
+
+<dialog class="dialog tip-dialog" id="tipDialog">
+  <div id="tipAsk">
+    <h3 data-i18n="tip_title">Unterstütze unsere Tätowierer!</h3>
+    <p data-i18n="tip_text">Noch ein kleines Trinkgeld für die Nadelkünstler?</p>
+    <div class="tip-options" id="tipOptions"></div>
+    <button type="button" class="tip-none" id="tipNone" data-i18n="tip_none">gar kein Trinkgeld</button>
+  </div>
+  <div id="tipResult" hidden>
+    <h3 id="tipResultTitle" role="status"></h3>
+    <p id="tipResultText"></p>
+    <p class="tip-sum" id="tipSum"></p>
+    <textarea class="tip-copy" id="tipCopy" readonly hidden></textarea>
+    <button type="button" class="btn btn-primary btn-sm" data-close data-i18n="aria_close">Schließen</button>
+  </div>
+</dialog>
+
+<dialog class="dialog agb-dialog" id="agbDialog">
+  <h3 data-i18n="agb_title">Allgemeine Geschäftsbedingungen</h3>
+  <ol id="agbList"></ol>
+  <div class="dialog-actions">
+    <button type="button" class="btn btn-primary btn-sm" data-close data-i18n="aria_close">Schließen</button>
+  </div>
+</dialog>
 
 <dialog class="dialog" id="tattooDialog">
   <form method="dialog" id="tattooForm">

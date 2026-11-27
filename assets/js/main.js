@@ -14,7 +14,7 @@
       confirm_tattoo: "Dieses Tattoo entfernen?", confirm_staff: "Diesen Mitarbeiter entfernen?",
       team_eyebrow: "Die Kuratoren", team_title: "MITARBEITER",
       team_sub: "Präzision ohne Kompromiss. Zertifiziert in Hygiene und Sterilisation.",
-      grp_artist: "Tätowierer", grp_assist: "Assistenz", team_empty: "Noch keine Mitarbeiter",
+      grp_artist: "Tätowierer", grp_assist: "Assistenz", job_marketing: "Marketing-Manager", team_empty: "Noch keine Mitarbeiter",
       loc_eyebrow: "Das Refugium", loc_title: "STANDORT", loc_reception: "Empfang", loc_room: "Tattoo-Saal",
       loc_map: "Central-Bay · United-Islands", loc_map_hint: "Ziehen · Zoomen",
       loc_address: "Adresse", loc_phone: "Telefon",
@@ -39,7 +39,7 @@
       aria_reset: "Zurücksetzen", aria_top: "Nach oben", aria_close: "Schließen", aria_prev: "Zurück", aria_next: "Weiter",
       alt_room1: "Tattoo-Saal 1", alt_room2: "Tattoo-Saal 2", alt_map: "Karte von Central-Bay",
       td_price_cash: "Preis Bar", td_ph_price_cash: "z.B. 430",
-      per_session: "Preis pro Sitzung", sessions_n: "{n} Sitzungen",
+      per_session: "Preis pro Sitzung", in_cart: "Im Warenkorb: {n}×", view_cart: "Warenkorb ansehen", sessions_n: "{n} Sitzungen",
       sess_pay: "Du bezahlst für {n} Sitzungen, also {n}× den Preis.",
       sess_wait: "Mindestens {d} Tage Wartezeit bis zur nächsten Sitzung.",
       price_card: "Karte", price_cash: "Bar", add_to_cart: "In den Warenkorb",
@@ -50,10 +50,16 @@
       cart_discounts: "Mengenrabatt", cart_tier: "ab {n} Tattoos {p}%",
       cart_next: "Noch {n} Tattoo(s) bis {p}% Rabatt!",
       sum_sub: "Zwischensumme", sum_vol: "Mengenrabatt {p}%", sum_code: "Rabattcode {c} {p}%",
-      sum_total: "Gesamt", sum_save: "Du sparst mit Bargeld",
-      cart_copy: "Zusammenfassung kopieren", cart_copied: "Kopiert!", cart_clear: "Leeren",
+      sum_total: "Gesamt", sum_down: "Zu deinen Gunsten auf volle 50 gerundet", sum_save: "Du sparst mit Bargeld",
+      cart_done: "Fertig", cart_clear: "Leeren",
       order_title: "BIS Bestellung", order_items: "Tattoos", order_discount: "Rabatt",
-      order_total_cash: "Gesamt Bargeld", order_total_card: "Gesamt Karte", order_pay: "Zahlungsart"
+      order_total_cash: "Gesamt Bargeld", order_total_card: "Gesamt Karte", order_pay: "Zahlungsart", order_tip: "Trinkgeld", order_to_pay: "Zu zahlen",
+      tip_title: "Unterstütze unsere Tätowierer!", tip_text: "Noch ein kleines Trinkgeld für die Nadelkünstler?",
+      tip_100: "Legende", tip_50: "Stark", tip_20: "Okay …", tip_none: "gar kein Trinkgeld",
+      tip_yes_title: "Du bist der Hammer!", tip_yes_text: "Deine Bestellung ist mit Trinkgeld kopiert. Zeig sie uns im Studio.",
+      tip_no_title: "Oh. Okay.", tip_no_text: "Unsere Tätowierer weinen kurz. Deine Bestellung ist trotzdem kopiert.",
+      tip_fail: "Kopieren hat nicht geklappt. Markiere den Text und kopiere ihn selbst.",
+      price_soon: "Preis folgt", agb_link: "AGB", agb_title: "Allgemeine Geschäftsbedingungen"
     },
     hi: {
       nav_home: "होम", nav_tattoos: "टैटू", nav_team: "कर्मचारी", nav_location: "स्थान",
@@ -67,7 +73,7 @@
       confirm_tattoo: "यह टैटू हटाएं?", confirm_staff: "इस कर्मचारी को हटाएं?",
       team_eyebrow: "कलाकार", team_title: "कर्मचारी",
       team_sub: "बिना समझौते सटीकता। स्वच्छता और नस्यकरण में प्रमाणित।",
-      grp_artist: "टैटू कलाकार", grp_assist: "सहायक", team_empty: "अभी तक कोई कर्मचारी नहीं",
+      grp_artist: "टैटू कलाकार", grp_assist: "सहायक", job_marketing: "मार्केटिंग मैनेजर", team_empty: "अभी तक कोई कर्मचारी नहीं",
       loc_eyebrow: "आश्रय", loc_title: "स्थान", loc_reception: "स्वागत कक्ष", loc_room: "टैटू-कक्ष",
       loc_map: "सेंट्रल-बे · यूनाइटेड-आइलैंड्स", loc_map_hint: "खींचें · ज़ूम करें",
       loc_address: "पता", loc_phone: "फ़ोन",
@@ -92,7 +98,7 @@
       aria_reset: "रीसेट", aria_top: "ऊपर जाएं", aria_close: "बंद करें", aria_prev: "पिछला", aria_next: "अगला",
       alt_room1: "टैटू-कक्ष 1", alt_room2: "टैटू-कक्ष 2", alt_map: "सेंट्रल-बे का नक्शा",
       td_price_cash: "नकद मूल्य", td_ph_price_cash: "जैसे 430",
-      per_session: "मूल्य प्रति सत्र", sessions_n: "{n} सत्र",
+      per_session: "मूल्य प्रति सत्र", in_cart: "कार्ट में: {n}×", view_cart: "कार्ट देखें", sessions_n: "{n} सत्र",
       sess_pay: "आप {n} सत्रों का भुगतान करेंगे, यानी {n}× मूल्य।",
       sess_wait: "अगले सत्र से पहले कम से कम {d} दिन इंतज़ार करना होगा।",
       price_card: "कार्ड", price_cash: "नकद", add_to_cart: "कार्ट में जोड़ें",
@@ -103,10 +109,16 @@
       cart_discounts: "मात्रा पर छूट", cart_tier: "{n} टैटू से {p}%",
       cart_next: "{p}% छूट के लिए {n} टैटू और!",
       sum_sub: "उप-योग", sum_vol: "मात्रा छूट {p}%", sum_code: "छूट कोड {c} {p}%",
-      sum_total: "कुल", sum_save: "नकद से आपकी बचत",
-      cart_copy: "सारांश कॉपी करें", cart_copied: "कॉपी हो गया!", cart_clear: "खाली करें",
+      sum_total: "कुल", sum_down: "आपके फ़ायदे में पूरे 50 पर घटाया गया", sum_save: "नकद से आपकी बचत",
+      cart_done: "हो गया", cart_clear: "खाली करें",
       order_title: "BIS ऑर्डर", order_items: "टैटू", order_discount: "छूट",
-      order_total_cash: "कुल नकद", order_total_card: "कुल कार्ड", order_pay: "भुगतान"
+      order_total_cash: "कुल नकद", order_total_card: "कुल कार्ड", order_pay: "भुगतान", order_tip: "टिप", order_to_pay: "देय राशि",
+      tip_title: "हमारे टैटू कलाकारों का साथ दें!", tip_text: "सुई के कलाकारों के लिए थोड़ी सी टिप?",
+      tip_100: "लीजेंड", tip_50: "शानदार", tip_20: "ठीक है …", tip_none: "कोई टिप नहीं",
+      tip_yes_title: "आप कमाल हैं!", tip_yes_text: "आपका ऑर्डर टिप के साथ कॉपी हो गया है। इसे स्टूडियो में हमें दिखाएं।",
+      tip_no_title: "ओह। ठीक है।", tip_no_text: "हमारे कलाकार थोड़ा रो लेंगे। आपका ऑर्डर फिर भी कॉपी हो गया है।",
+      tip_fail: "कॉपी नहीं हो सका। टेक्स्ट चुनकर खुद कॉपी करें।",
+      price_soon: "मूल्य जल्द", agb_link: "नियम व शर्तें", agb_title: "सामान्य नियम व शर्तें"
     }
   };
 
@@ -138,6 +150,7 @@
     currency: seed.currency || "$",
     stackDiscounts: !!seed.stackDiscounts,
     sessionWaitDays: seed.sessionWaitDays || 3,
+    totalRoundTo: seed.totalRoundTo == null ? 50 : seed.totalRoundTo,
     cardMarkupPct: seed.cardMarkupPct == null ? 5 : seed.cardMarkupPct,
     cardRoundTo: seed.cardRoundTo || 5,
     volumeDiscounts: (seed.volumeDiscounts || []).slice().sort(function (a, b) { return a.min - b.min; }),
@@ -167,6 +180,9 @@
     return round2(n).toLocaleString(lang === "hi" ? "hi-IN" : "de-DE", { minimumFractionDigits: 0, maximumFractionDigits: 2 }) + " " + config.currency;
   }
   function sessOf(x) { return Math.max(1, parseInt(x.sessions, 10) || 1); }
+  function catsOf(x) { return [].concat(x.category); }
+  function catLabel(x) { return catsOf(x).map(function (c) { return t("cat_" + c); }).join(" · "); }
+  function picsOf(x) { return [x.number].concat(x.image || x.thumb ? [] : x.extra || []); }
   function cardFromCash(cash) {
     if (cash <= 0) return 0;
     var raw = round2(cash * (100 + config.cardMarkupPct) / 100);
@@ -187,6 +203,36 @@
     if (cls) n.className = cls;
     if (text != null) n.textContent = text;
     return n;
+  }
+  var sheets = window.BIS_DATA.sheets || null;
+  var sheetObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      paintSheet(e.target);
+      sheetObs.unobserve(e.target);
+    });
+  }, { rootMargin: "600px 0px" });
+  function paintSheet(node) {
+    var src = node.getAttribute("data-sheet");
+    if (src) node.style.backgroundImage = 'url("' + src + '")';
+  }
+  function tattooPicture(x, alt, small, cell) {
+    var own = small ? x.thumb || x.image : x.image || x.thumb;
+    if (own) {
+      var img = el("img");
+      img.src = own; img.alt = alt; img.loading = "lazy"; img.decoding = "async";
+      return img;
+    }
+    var box = el("span", "pic"), n = Number(cell || x.number);
+    if (alt) { box.setAttribute("role", "img"); box.setAttribute("aria-label", alt); }
+    if (sheets && n % 1 === 0 && n >= 1 && n <= sheets.max) {
+      var i = (n - 1) % sheets.per;
+      box.style.backgroundSize = sheets.cols * 100 + "% " + sheets.rows * 100 + "%";
+      box.style.backgroundPosition = (i % sheets.cols) * 100 / (sheets.cols - 1) + "% " + Math.floor(i / sheets.cols) * 100 / (sheets.rows - 1) + "%";
+      box.setAttribute("data-sheet", sheets.path + (Math.floor((n - 1) / sheets.per) + 1) + ".jpg");
+      sheetObs.observe(box);
+    }
+    return box;
   }
   function persist() { try { localStorage.setItem(DATA_KEY, JSON.stringify(data)); } catch (e) { alert("Speicher voll – bitte erst exportieren."); } }
   function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
@@ -219,7 +265,20 @@
     renderTattoos();
     renderTeam();
     renderCart();
+    renderAgb();
   }
+
+  function renderAgb() {
+    var list = $("#agbList");
+    list.textContent = "";
+    (seed.agb || []).forEach(function (entry) {
+      var part = entry[lang] || entry.de, item = el("li");
+      item.appendChild(el("h4", "", part.title));
+      item.appendChild(el("p", "", part.text));
+      list.appendChild(item);
+    });
+  }
+  $("#agbBtn").addEventListener("click", function () { $("#agbDialog").showModal(); $("#agbList").scrollTop = 0; });
 
   function fillSelect(sel, opts) {
     var cur = sel.value;
@@ -262,16 +321,9 @@
     entries.forEach(function (e) {
       if (e.isIntersecting) { e.target.classList.add("in"); revealObs.unobserve(e.target); }
     });
-  }, { threshold: 0.12 });
+  }, { rootMargin: "0px 0px -8% 0px" });
   function observeReveals(root) { $$(".reveal:not(.in)", root).forEach(function (n) { revealObs.observe(n); }); }
   observeReveals();
-
-  var hero = $("#home"), glow = $("#heroGlow");
-  hero.addEventListener("pointermove", function (e) {
-    var r = hero.getBoundingClientRect();
-    glow.style.setProperty("--mx", e.clientX - r.left + "px");
-    glow.style.setProperty("--my", e.clientY - r.top + "px");
-  });
 
   function renderChips() {
     var box = $("#tattooChips");
@@ -291,7 +343,7 @@
   function renderTattoos() {
     var rows = $("#tattooRows");
     rows.textContent = "";
-    var inCat = data.tattoos.filter(function (x) { return state.cat === "all" || x.category === state.cat; });
+    var inCat = data.tattoos.filter(function (x) { return state.cat === "all" || catsOf(x).indexOf(state.cat) > -1; });
     var list = inCat.filter(function (x) { return !state.q || String(x.number) === state.q || infoAll(x).toLowerCase().indexOf(state.q) > -1; });
     list.sort(function (a, b) { return String(a.number).localeCompare(String(b.number), undefined, { numeric: true }); });
     if (!list.length) {
@@ -299,22 +351,30 @@
       return;
     }
     list.slice(0, state.limit).forEach(function (x) {
-      var card = el("article", "tcard");
+      var pics = picsOf(x), duo = pics.length > 1;
+      var card = el("article", "tcard" + (duo ? " wide" : ""));
       var priced = hasPrice(x);
 
-      var imgBtn = el("button", "tc-img");
+      var name = infoText(x) || "Tattoo #" + x.number;
+      function openDetail() {
+        openLightbox(list.map(function (y) { return { tattoo: y }; }), list.indexOf(x));
+      }
+
+      var head = el("button", "tc-head");
+      head.type = "button";
+      head.appendChild(el("span", "tc-name", name));
+      head.appendChild(el("span", "tc-where", "#" + x.number + (state.cat === "all" || catsOf(x).length > 1 ? " · " + catLabel(x) : "")));
+      head.addEventListener("click", openDetail);
+      card.appendChild(head);
+
+      var imgBtn = el("button", "tc-img" + (duo ? " duo" : ""));
       imgBtn.type = "button";
-      imgBtn.setAttribute("aria-label", "#" + x.number);
-      var img = el("img");
-      img.src = x.thumb || x.image; img.alt = infoText(x) || "Tattoo " + x.number;
-      img.loading = "lazy"; img.decoding = "async"; img.width = 360; img.height = 540;
-      imgBtn.appendChild(img);
-      imgBtn.addEventListener("click", function () {
-        openLightbox(list.map(function (y) { return { src: y.image, cap: "#" + y.number + (infoText(y) ? " · " + infoText(y) : "") }; }), list.indexOf(x));
+      imgBtn.setAttribute("aria-label", "#" + x.number + " " + name);
+      pics.forEach(function (cell, i) {
+        imgBtn.appendChild(tattooPicture(x, name + (i ? " (" + (i + 1) + ")" : ""), true, cell));
       });
+      imgBtn.addEventListener("click", openDetail);
       card.appendChild(imgBtn);
-      card.appendChild(el("span", "tc-num", "#" + x.number));
-      if (state.cat === "all") card.appendChild(el("span", "tc-cat", t("cat_" + x.category)));
       if (isAdmin) card.appendChild(delButton("tt-del", function () {
         if (!confirm(t("confirm_tattoo"))) return;
         data.tattoos = data.tattoos.filter(function (y) { return y.id !== x.id; });
@@ -322,46 +382,28 @@
         saveCart(); persist(); renderTattoos(); renderCart();
       }));
 
-      var body = el("div", "tc-body");
-      var buy = el("div", "tc-buy");
-      var pr = el("div", "tt-price");
+      var foot = el("div", "tc-foot");
       if (priced) {
-        [["cash", priceCash(x), "price_cash"], ["card", priceCard(x), "price_card"]].forEach(function (p) {
-          var line = el("div", p[0]);
-          line.appendChild(el("b", "", fmt(p[1])));
-          line.appendChild(el("small", "", t(p[2])));
-          pr.appendChild(line);
+        var price = el("button", "tc-price");
+        price.type = "button";
+        price.appendChild(el("b", "", fmt(priceCash(x))));
+        price.appendChild(el("small", "", t("price_cash")));
+        price.addEventListener("click", openDetail);
+        foot.appendChild(price);
+        var add = el("button", "tt-add", "+");
+        add.type = "button";
+        add.setAttribute("aria-label", t("add_to_cart") + " #" + x.number);
+        add.title = t("add_to_cart");
+        if (cart.items[x.id]) add.appendChild(el("em", "", String(cart.items[x.id])));
+        add.addEventListener("click", function () {
+          addToCart(x.id);
+          add.classList.remove("pop"); void add.offsetWidth; add.classList.add("pop");
         });
-        pr.appendChild(el("small", "tt-per", t("per_session")));
+        foot.appendChild(add);
       } else {
-        pr.appendChild(el("b", "", "–"));
+        foot.appendChild(el("span", "tt-soon", t("price_soon")));
       }
-      buy.appendChild(pr);
-      var add = el("button", "tt-add", "+");
-      add.type = "button";
-      add.setAttribute("aria-label", t("add_to_cart") + " #" + x.number);
-      add.title = t("add_to_cart");
-      add.disabled = !priced;
-      if (cart.items[x.id]) add.appendChild(el("em", "", String(cart.items[x.id])));
-      add.addEventListener("click", function () {
-        addToCart(x.id);
-        add.classList.remove("pop"); void add.offsetWidth; add.classList.add("pop");
-      });
-      buy.appendChild(add);
-      body.appendChild(buy);
-
-      var meta = el("p", "tc-meta");
-      meta.appendChild(el("span", "", t("col_sessions") + ": "));
-      meta.appendChild(el("b", "", String(sessOf(x))));
-      body.appendChild(meta);
-      if (infoText(x)) body.appendChild(el("p", "tc-info", infoText(x)));
-      if (sessOf(x) > 1) {
-        var note = el("p", "tt-note");
-        note.appendChild(el("b", "", tf("sess_pay", { n: sessOf(x) })));
-        note.appendChild(el("span", "", tf("sess_wait", { d: config.sessionWaitDays })));
-        body.appendChild(note);
-      }
-      card.appendChild(body);
+      card.appendChild(foot);
       rows.appendChild(card);
     });
     if (list.length > state.limit) {
@@ -424,7 +466,11 @@
     });
     var codePct = cart.code ? (config.codes[cart.code] || 0) : 0;
     var pct = config.stackDiscounts ? volPct + codePct : Math.max(volPct, codePct);
-    function side(sub) { var d = round2(sub * pct / 100); return { sub: sub, disc: d, total: round2(sub - d) }; }
+    function side(sub) {
+      var d = round2(sub * pct / 100), exact = round2(sub - d), total = exact, step = config.totalRoundTo;
+      if (pct > 0 && step > 0) total = Math.floor((exact + 0.001) / step) * step;
+      return { sub: sub, disc: d, down: round2(exact - total), total: total };
+    }
     var card = side(sumCard), cash = side(sumCash);
     return {
       lines: lines, count: count, volPct: volPct, codePct: codePct, pct: pct, card: card, cash: cash,
@@ -439,18 +485,65 @@
     return c.codePct >= c.volPct ? code : vol;
   }
 
-  function orderText(c) {
+  function orderText(c, tip) {
     var out = [t("order_title"), ""];
     c.lines.forEach(function (l) {
-      out.push(l.q + "× #" + l.x.number + (infoText(l.x) ? " " + infoText(l.x) : "") + " — " + t("cat_" + l.x.category) + (sessOf(l.x) > 1 ? " (" + tf("sessions_n", { n: sessOf(l.x) }) + ")" : ""));
+      out.push(l.q + "× #" + l.x.number + (infoText(l.x) ? " " + infoText(l.x) : "") + " — " + catLabel(l.x) + (sessOf(l.x) > 1 ? " (" + tf("sessions_n", { n: sessOf(l.x) }) + ")" : ""));
     });
     out.push("");
     if (c.pct) out.push(t("order_discount") + ": " + c.pct + "%");
     out.push(t("order_total_cash") + ": " + fmt(c.cash.total));
     out.push(t("order_total_card") + ": " + fmt(c.card.total));
     out.push(t("order_pay") + ": " + t("pay_" + cart.pay));
+    if (tip) {
+      out.push(t("order_tip") + ": " + tip + "% (+" + fmt(tipAmount(c, tip)) + ")");
+      out.push(t("order_to_pay") + ": " + fmt(payTotal(c) + tipAmount(c, tip)));
+    }
     return out.join("\n");
   }
+
+  function payTotal(c) { return (cart.pay === "card" ? c.card : c.cash).total; }
+  function tipAmount(c, pct) { return round2(payTotal(c) * pct / 100); }
+  function copyText(txt) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(txt);
+    return Promise.reject();
+  }
+
+  var TIPS = [100, 50, 20];
+  var tipDlg = $("#tipDialog"), tipOrder = null;
+  function openTip(c) {
+    tipOrder = c;
+    copyText(orderText(c)).catch(function () {});
+    var box = $("#tipOptions");
+    box.textContent = "";
+    TIPS.forEach(function (pct, i) {
+      var b = el("button", "tip-opt" + (i ? "" : " top"));
+      b.type = "button";
+      b.appendChild(el("b", "", pct + "%"));
+      b.appendChild(el("span", "", t("tip_" + pct)));
+      b.appendChild(el("small", "", "+" + fmt(tipAmount(c, pct))));
+      b.addEventListener("click", function () { chooseTip(pct); });
+      box.appendChild(b);
+    });
+    $("#tipAsk").hidden = false;
+    $("#tipResult").hidden = true;
+    tipDlg.showModal();
+  }
+  function chooseTip(pct) {
+    var txt = orderText(tipOrder, pct);
+    function show(copied) {
+      var kind = pct ? "yes" : "no", area = $("#tipCopy");
+      $("#tipResultTitle").textContent = t("tip_" + kind + "_title");
+      $("#tipResultText").textContent = copied ? t("tip_" + kind + "_text") : t("tip_fail");
+      $("#tipSum").textContent = t("order_to_pay") + ": " + fmt(payTotal(tipOrder) + tipAmount(tipOrder, pct)) + " · " + t("pay_" + cart.pay);
+      area.hidden = copied;
+      area.value = copied ? "" : txt;
+      $("#tipAsk").hidden = true;
+      $("#tipResult").hidden = false;
+    }
+    copyText(txt).then(function () { show(true); }, function () { show(false); });
+  }
+  $("#tipNone").addEventListener("click", function () { chooseTip(0); });
 
   function sumRow(cls, label, value) {
     var r = el("div", "sum-row" + (cls ? " " + cls : ""));
@@ -475,9 +568,10 @@
     var list = el("div", "cart-items");
     c.lines.forEach(function (l) {
       var item = el("div", "cart-item");
-      var img = el("img"); img.src = l.x.thumb || l.x.image; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
-      item.appendChild(img);
-      var name = el("div", "ci-name", t("cat_" + l.x.category));
+      var thumb = el("span", "ci-thumb");
+      thumb.appendChild(tattooPicture(l.x, "", true));
+      item.appendChild(thumb);
+      var name = el("div", "ci-name", catLabel(l.x));
       name.appendChild(el("small", "", "#" + l.x.number + (infoText(l.x) ? " · " + infoText(l.x) : "") + (sessOf(l.x) > 1 ? " · " + tf("sessions_n", { n: sessOf(l.x) }) : "")));
       item.appendChild(name);
       var unit = cart.pay === "card" ? priceCard(l.x) : priceCash(l.x);
@@ -538,7 +632,8 @@
 
     var sum = el("div", "sum");
     sum.appendChild(sumRow("", t("sum_sub"), fmt(sel.sub)));
-    if (c.pct > 0) sum.appendChild(sumRow("disc", discountLabel(c), "−" + fmt(sel.disc)));
+    if (c.pct > 0) sum.appendChild(sumRow("disc", discountLabel(c), "−" + fmt(round2(sel.sub - sel.total))));
+    if (sel.down > 0) sum.appendChild(el("p", "sum-hint", t("sum_down")));
     sum.appendChild(sumRow("total", t("sum_total") + " · " + t("pay_" + cart.pay), fmt(sel.total)));
     cartBody.appendChild(sum);
 
@@ -565,15 +660,11 @@
     }
 
     var actions = el("div", "cart-actions");
-    var copy = el("button", "btn btn-primary btn-sm", t("cart_copy")); copy.type = "button";
-    copy.addEventListener("click", function () {
-      var txt = orderText(c);
-      function done() { copy.textContent = t("cart_copied"); setTimeout(function () { copy.textContent = t("cart_copy"); }, 1600); }
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, function () {});
-    });
+    var done = el("button", "btn btn-primary btn-sm", t("cart_done")); done.type = "button";
+    done.addEventListener("click", function () { openTip(c); });
     var clear = el("button", "btn btn-ghost btn-sm", t("cart_clear")); clear.type = "button";
     clear.addEventListener("click", function () { cart.items = {}; saveCart(); renderCart(); renderTattoos(); });
-    actions.appendChild(copy); actions.appendChild(clear);
+    actions.appendChild(done); actions.appendChild(clear);
     cartBody.appendChild(actions);
   }
 
@@ -596,7 +687,7 @@
   cartBtn.addEventListener("click", openCart);
   $("#cartClose").addEventListener("click", closeCart);
   cartOverlay.addEventListener("click", closeCart);
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && cartEl.classList.contains("open")) closeCart(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && cartEl.classList.contains("open") && !tipDlg.open) closeCart(); });
 
   function delButton(cls, fn) {
     var b = el("button", cls, "✕");
@@ -635,6 +726,7 @@
         card.appendChild(el("span", "member-idx", String(i + 1)));
         card.appendChild(el("h3", "member-name", nameOf(m.name)));
         card.appendChild(el("p", "member-role", t("grp_" + role)));
+        if (m.job) card.appendChild(el("p", "member-job", t("job_" + m.job)));
         if (m.phone) {
           var ph2 = el("p", "member-phone");
           ph2.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>';
@@ -653,10 +745,72 @@
     });
   }
 
-  var lb = $("#lightbox"), lbImg = $("#lbImg"), lbCap = $("#lbCap"), lbItems = [], lbIdx = 0;
+  var lb = $("#lightbox"), lbImg = $("#lbImg"), lbPic = $("#lbPic"), lbCap = $("#lbCap"), lbInfo = $("#lbInfo"), lbItems = [], lbIdx = 0;
+  function renderInfo(x) {
+    lbInfo.textContent = "";
+    lbInfo.appendChild(el("h3", "", infoText(x) || "Tattoo #" + x.number));
+    lbInfo.appendChild(el("p", "lbi-where", "#" + x.number + " · " + catLabel(x)));
+    var priced = hasPrice(x);
+    if (priced) {
+      var prices = el("div", "lbi-prices");
+      [[priceCash(x), "price_cash"], [priceCard(x), "price_card"]].forEach(function (p) {
+        var box = el("div");
+        box.appendChild(el("b", "", fmt(p[0])));
+        box.appendChild(el("small", "", t(p[1])));
+        prices.appendChild(box);
+      });
+      lbInfo.appendChild(prices);
+    } else {
+      lbInfo.appendChild(el("p", "lbi-meta", t("price_soon")));
+    }
+    lbInfo.appendChild(el("p", "lbi-meta", t("col_sessions") + ": " + sessOf(x) + (priced ? " · " + t("per_session") : "")));
+    if (sessOf(x) > 1) {
+      var note = el("p", "tt-note");
+      note.appendChild(el("b", "", tf("sess_pay", { n: sessOf(x) })));
+      note.appendChild(el("span", "", tf("sess_wait", { d: config.sessionWaitDays })));
+      lbInfo.appendChild(note);
+    }
+    if (!priced) return;
+    var add = el("button", "btn btn-primary btn-sm", t("add_to_cart"));
+    add.type = "button";
+    add.addEventListener("click", function () {
+      addToCart(x.id);
+      renderInfo(x);
+      $(".btn-primary", lbInfo).focus();
+    });
+    lbInfo.appendChild(add);
+    if (cart.items[x.id]) {
+      var go = el("button", "btn btn-ghost btn-sm", t("view_cart"));
+      go.type = "button";
+      go.addEventListener("click", function () { closeLightbox(); openCart(); });
+      lbInfo.appendChild(go);
+      var count = el("p", "lbi-count", tf("in_cart", { n: cart.items[x.id] }));
+      count.setAttribute("role", "status");
+      lbInfo.appendChild(count);
+    }
+  }
   function showLb() {
     var it = lbItems[lbIdx];
-    lbImg.src = it.src; lbImg.alt = it.cap || "";
+    lbPic.textContent = "";
+    lbPic.hidden = !it.tattoo;
+    lbImg.hidden = !!it.tattoo;
+    lbInfo.hidden = !it.tattoo;
+    lbCap.hidden = !!it.tattoo;
+    lb.classList.toggle("detail", !!it.tattoo);
+    lb.scrollTop = 0;
+    if (it.tattoo) {
+      renderInfo(it.tattoo);
+      var pics = picsOf(it.tattoo), alt = infoText(it.tattoo) || "Tattoo " + it.tattoo.number;
+      lbPic.classList.toggle("duo", pics.length > 1);
+      pics.forEach(function (cell) {
+        var pic = tattooPicture(it.tattoo, alt, false, cell);
+        paintSheet(pic);
+        lbPic.appendChild(pic);
+      });
+      lbImg.removeAttribute("src");
+    } else {
+      lbImg.src = it.src; lbImg.alt = it.cap || "";
+    }
     lbCap.textContent = it.cap || "";
     var multi = lbItems.length > 1;
     $("#lbPrev").hidden = !multi; $("#lbNext").hidden = !multi;
@@ -846,7 +1000,7 @@
     out.tattoos.forEach(function (x, i) {
       if (x.image && x.image.indexOf("data:") === 0) {
         var n = "tattoo-" + slug(String(x.number)) + "-" + (i + 1) + ".jpg";
-        files.push([n, x.image]); x.image = "assets/img/tattoos/" + n;
+        files.push([n, x.image]); x.image = "assets/img/" + n;
       }
       delete x.id;
     });
@@ -861,17 +1015,20 @@
       currency: config.currency,
       stackDiscounts: config.stackDiscounts,
       sessionWaitDays: config.sessionWaitDays,
+      totalRoundTo: config.totalRoundTo,
       cardMarkupPct: config.cardMarkupPct,
       cardRoundTo: config.cardRoundTo,
       volumeDiscounts: config.volumeDiscounts,
       codes: seed.codes || {},
+      sheets: seed.sheets,
+      agb: seed.agb,
       tattoos: out.tattoos,
       team: out.team
     };
     var txt = "window.BIS_DATA = " + JSON.stringify(full, null, 2) + ";\n";
     download("data.js", new Blob([txt], { type: "text/javascript" }));
     files.forEach(function (f, i) { setTimeout(function () { download(f[0], dataUrlToBlob(f[1])); }, 350 * (i + 1)); });
-    alert("data.js → assets/js/data.js ersetzen.\nTattoo-Bilder → assets/img/tattoos/\nPorträts → assets/img/team/");
+    alert("data.js → assets/js/data.js ersetzen.\nTattoo-Bilder → assets/img/\nPorträts → assets/img/team/");
   }
 
   if (isAdmin) {
